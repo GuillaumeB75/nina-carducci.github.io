@@ -1,4 +1,9 @@
+
+
 (function($) {
+
+  // initialisation de la fonction 'mauGallery' pour les prochains objets
+
   $.fn.mauGallery = function(options) {
     var options = $.extend($.fn.mauGallery.defaults, options);
     var tagsCollection = [];
@@ -40,6 +45,9 @@
       $(this).fadeIn(500);
     });
   };
+
+ // Définition des valeurs par défaut dans le plugin
+
   $.fn.mauGallery.defaults = {
     columns: 3,
     lightBox: true,
@@ -48,6 +56,9 @@
     tagsPosition: "bottom",
     navigation: true
   };
+
+ // Écouteurs d'évenènements pour le plugin, navigation et et clics
+
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
@@ -65,7 +76,13 @@
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };
+
+ // Fonctions utilisées par le plugin :
+
   $.fn.mauGallery.methods = {
+
+    // vérifie si l'élément est présent sinon ajout de celui-ci
+
     createRowWrapper(element) {
       if (
         !element
