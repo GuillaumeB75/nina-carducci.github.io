@@ -170,6 +170,7 @@
           index = i ;
         }
       });
+      index = (index - 1) % imagesCollection.length;
       next =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
@@ -209,6 +210,7 @@
           index = i;
         }
       });
+      index = (index + 1) % imagesCollection.length;
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
