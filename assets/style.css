@@ -99,7 +99,7 @@ body {
 }
 .gallery .nav {
 	justify-content: center;
-	cursor: pointer;   /*	correction du cursor pointer pour la navigation  */
+	cursor: pointer;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
