@@ -30,7 +30,7 @@ body {
 }
 
 .nav li {
-	padding-inline: 10px;
+	padding-inline: 10px
 }
 
 .nav a {
@@ -99,6 +99,7 @@ body {
 }
 .gallery .nav {
 	justify-content: center;
+	cursor: pointer;   /*	correction du cursor pointer pour la navigation  */
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
